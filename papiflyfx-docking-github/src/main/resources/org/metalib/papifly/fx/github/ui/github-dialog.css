@@ -1,0 +1,90 @@
+.pf-github-dialog-pane {
+    -fx-background-color: -pf-github-toolbar-bg;
+    -fx-border-color: -pf-github-toolbar-border;
+    -fx-border-width: 1;
+}
+
+.pf-github-dialog-pane:header .header-panel {
+    -fx-background-color: -pf-github-group-bg;
+}
+
+.pf-github-dialog-pane:header .header-panel .label {
+    -fx-text-fill: -pf-github-text;
+}
+
+.pf-github-dialog-pane .content.label,
+.pf-github-dialog-pane .label,
+.pf-github-dialog-pane .check-box,
+.pf-github-dialog-pane .radio-button {
+    -fx-text-fill: -pf-github-text;
+}
+
+.pf-github-dialog-pane .text-field,
+.pf-github-dialog-pane .text-area,
+.pf-github-dialog-pane .password-field,
+.pf-github-dialog-pane .combo-box-base {
+    -fx-background-color: -pf-github-control-bg;
+    -fx-border-color: -pf-github-control-border;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-text-fill: -pf-github-text;
+    -fx-prompt-text-fill: -pf-github-muted-text;
+}
+
+.pf-github-dialog-pane .text-area .content {
+    -fx-background-color: -pf-github-control-bg;
+}
+
+.pf-github-dialog-pane .combo-box-base > .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.pf-github-dialog-pane .text-field:focused,
+.pf-github-dialog-pane .text-area:focused,
+.pf-github-dialog-pane .password-field:focused,
+.pf-github-dialog-pane .combo-box-base:focused {
+    -fx-border-color: -pf-github-focus-border;
+}
+
+.pf-github-dialog-button {
+    -fx-background-color: -pf-github-control-bg;
+    -fx-border-color: -pf-github-control-border;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-text-fill: -pf-github-text;
+}
+
+.pf-github-dialog-button:hover {
+    -fx-background-color: -pf-github-control-hover-bg;
+}
+
+.pf-github-dialog-button:armed {
+    -fx-background-color: -pf-github-control-pressed-bg;
+}
+
+.pf-github-dialog-button:focused {
+    -fx-border-color: -pf-github-focus-border;
+}
+
+.pf-github-dialog-button-primary {
+    -fx-background-color: -pf-github-accent;
+    -fx-border-color: -pf-github-accent;
+    -fx-text-fill: white;
+}
+
+.pf-github-dialog-button-primary:hover {
+    -fx-background-color: -pf-github-control-hover-bg;
+    -fx-border-color: -pf-github-focus-border;
+    -fx-text-fill: -pf-github-text;
+}
+
+.pf-github-dialog-button-danger {
+    -fx-background-color: -pf-ui-danger-subtle;
+    -fx-border-color: -pf-github-danger;
+}
+
+.pf-github-dialog-button-secondary {
+    -fx-background-color: -pf-github-control-bg;
+}

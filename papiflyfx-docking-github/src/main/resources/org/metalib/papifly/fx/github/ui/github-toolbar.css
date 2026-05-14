@@ -1,0 +1,291 @@
+.pf-github-toolbar {
+    -fx-background-color: linear-gradient(to bottom, -pf-github-toolbar-bg, derive(-pf-github-toolbar-bg, -4%));
+    -fx-border-color: -pf-github-toolbar-border;
+    -fx-border-width: 0 0 1 0;
+    -fx-alignment: center-left;
+}
+
+.pf-github-toolbar .label {
+    -fx-text-fill: -pf-github-text;
+}
+
+.pf-github-brand-badge {
+    -fx-padding: 4 12 4 12;
+    -fx-background-color: -pf-ui-accent-subtle;
+    -fx-border-color: -pf-ui-accent;
+    -fx-border-width: 1;
+    -fx-border-radius: 999px;
+    -fx-background-radius: 999px;
+    -fx-text-fill: -pf-github-link;
+    -fx-font-weight: bold;
+}
+
+.pf-github-repo-pill,
+.pf-github-ref-pill {
+    -fx-padding: 0 16 0 16;
+    -fx-text-fill: -pf-github-text;
+}
+
+.pf-github-repo-pill:hover,
+.pf-github-ref-pill:hover {
+    -fx-background-color: -pf-ui-surface-control-hover;
+}
+
+.pf-github-repo-pill:armed,
+.pf-github-ref-pill:armed {
+    -fx-background-color: -pf-ui-surface-control-pressed;
+}
+
+.pf-github-repo-pill:focused,
+.pf-github-ref-pill:focused,
+.pf-github-action-button:focused,
+.pf-github-overflow-button:focused,
+.pf-github-ref-popup-search:focused,
+.pf-github-ref-popup-list:focused,
+.pf-github-ref-submenu-list:focused {
+    -fx-border-color: -pf-github-focus-border;
+}
+
+.pf-github-ref-pill-content {
+    -fx-alignment: center-left;
+    -fx-spacing: 8;
+}
+
+.pf-github-ref-dot {
+    -fx-fill: -pf-github-muted-text;
+}
+
+.pf-github-ref-dot-clean {
+    -fx-fill: -pf-github-success;
+}
+
+.pf-github-ref-dot-dirty {
+    -fx-fill: -pf-github-danger;
+}
+
+.pf-github-ref-dot-neutral {
+    -fx-fill: -pf-github-muted-text;
+}
+
+.pf-github-ref-kind,
+.pf-github-ref-popup-kind {
+    -fx-min-width: 20;
+    -fx-alignment: center;
+    -fx-padding: 0 4 0 4;
+    -fx-background-color: -pf-github-control-bg;
+    -fx-background-radius: 999px;
+    -fx-text-fill: -pf-github-text;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+.pf-github-ref-kind-local,
+.pf-github-ref-popup-kind-local {
+    -fx-background-color: -pf-ui-accent-subtle;
+}
+
+.pf-github-ref-kind-remote,
+.pf-github-ref-popup-kind-remote {
+    -fx-background-color: -pf-ui-surface-control;
+}
+
+.pf-github-ref-kind-tag,
+.pf-github-ref-popup-kind-tag {
+    -fx-background-color: -pf-ui-warning-subtle;
+}
+
+.pf-github-ref-kind-detached,
+.pf-github-ref-popup-kind-detached {
+    -fx-background-color: -pf-ui-danger-subtle;
+}
+
+.pf-github-ref-popup-kind-action {
+    -fx-background-color: -pf-ui-accent-subtle;
+}
+
+.pf-github-ref-text {
+    -fx-text-fill: -pf-github-text;
+}
+
+.pf-github-ref-chevron {
+    -fx-text-fill: -pf-github-muted-text;
+}
+
+.pf-github-chip-strip {
+    -fx-spacing: 8;
+}
+
+.pf-github-chip {
+    -fx-font-size: 11px;
+}
+
+.pf-github-action-bar {
+    -fx-spacing: 8;
+    -fx-alignment: center-left;
+}
+
+.pf-github-action-button,
+.pf-github-overflow-button {
+    -fx-padding: 0 12 0 12;
+    -fx-background-color: -pf-ui-surface-control;
+    -fx-border-color: -pf-ui-border-default;
+    -fx-border-width: 1;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-text-fill: -pf-github-text;
+}
+
+.pf-github-action-button:hover,
+.pf-github-overflow-button:hover {
+    -fx-background-color: -pf-ui-surface-control-hover;
+}
+
+.pf-github-action-button:armed,
+.pf-github-overflow-button:showing,
+.pf-github-overflow-button:armed {
+    -fx-background-color: -pf-ui-surface-control-pressed;
+}
+
+.pf-github-action-button:disabled,
+.pf-github-overflow-button:disabled {
+    -fx-text-fill: -pf-github-disabled-text;
+    -fx-opacity: 1.0;
+}
+
+.pf-github-status-slot {
+    -fx-padding: 0 0 0 8;
+}
+
+.pf-github-busy-indicator {
+    -fx-progress-color: -pf-github-busy-indicator;
+}
+
+.pf-github-status-label {
+    -fx-text-fill: -pf-github-muted-text;
+}
+
+.pf-github-error-label {
+    -fx-text-fill: -pf-github-text;
+}
+
+.pf-github-ref-popup,
+.pf-github-ref-submenu-list {
+    -fx-padding: 12;
+    -fx-spacing: 8;
+}
+
+.pf-github-ref-popup-search {
+    -fx-text-fill: -pf-github-text;
+    -fx-prompt-text-fill: -pf-github-muted-text;
+}
+
+.pf-github-ref-popup-list,
+.pf-github-ref-submenu-list {
+    -fx-background-color: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+}
+
+.pf-github-ref-popup-list .scroll-bar,
+.pf-github-ref-submenu-list .scroll-bar {
+    -fx-opacity: 0.85;
+}
+
+.pf-github-ref-popup-list .list-cell,
+.pf-github-ref-submenu-list .list-cell {
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.pf-github-ref-popup-list .list-cell:selected,
+.pf-github-ref-submenu-list .list-cell:selected {
+    -fx-background-color: -pf-ui-surface-selected;
+    -fx-background-radius: 8px;
+}
+
+.pf-github-ref-popup-list .list-cell:hover,
+.pf-github-ref-submenu-list .list-cell:hover {
+    -fx-background-color: -pf-ui-accent-subtle;
+    -fx-background-radius: 8px;
+}
+
+.pf-github-ref-popup-header-cell {
+    -fx-padding: 12 0 4 0;
+}
+
+.pf-github-ref-popup-header {
+    -fx-text-fill: -pf-github-muted-text;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+.pf-github-ref-popup-entry {
+    -fx-spacing: 12;
+    -fx-alignment: center-left;
+    -fx-padding: 8 12 8 12;
+}
+
+.pf-github-ref-popup-entry-disabled {
+    -fx-opacity: 0.62;
+}
+
+.pf-github-ref-popup-primary {
+    -fx-text-fill: -pf-github-text;
+}
+
+.pf-github-ref-popup-secondary {
+    -fx-text-fill: -pf-github-muted-text;
+    -fx-font-size: 11px;
+}
+
+.pf-github-ref-popup-current {
+    -fx-pref-width: 8;
+    -fx-pref-height: 8;
+    -fx-min-width: 8;
+    -fx-min-height: 8;
+    -fx-max-width: 8;
+    -fx-max-height: 8;
+    -fx-background-color: -pf-github-accent;
+    -fx-background-radius: 999px;
+}
+
+.pf-github-ref-popup-chevron {
+    -fx-text-fill: -pf-github-muted-text;
+}
+
+.pf-github-overflow-menu {
+    -fx-background-color: -pf-github-group-bg;
+    -fx-background-radius: 12;
+    -fx-border-color: -pf-github-group-border;
+    -fx-border-radius: 12;
+    -fx-border-width: 1;
+    -fx-padding: 8;
+    -fx-effect: dropshadow(three-pass-box, -pf-github-shadow, 20, 0.18, 0, 8);
+}
+
+.pf-github-overflow-menu .menu-item {
+    -fx-background-color: transparent;
+    -fx-background-radius: 8;
+    -fx-padding: 8 12 8 12;
+}
+
+.pf-github-overflow-menu .menu-item > .label {
+    -fx-text-fill: -pf-github-text;
+}
+
+.pf-github-overflow-menu .menu-item:focused {
+    -fx-background-color: -pf-github-control-hover-bg;
+}
+
+.pf-github-overflow-menu .menu-item:armed {
+    -fx-background-color: -pf-github-control-pressed-bg;
+}
+
+.pf-github-overflow-menu .menu-item:disabled {
+    -fx-opacity: 1.0;
+}
+
+.pf-github-overflow-menu .menu-item:disabled > .label {
+    -fx-text-fill: -pf-github-disabled-text;
+}

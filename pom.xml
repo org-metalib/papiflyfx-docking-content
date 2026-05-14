@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.metalib.papifly.docking</groupId>
+        <artifactId>papiflyfx-build-parent</artifactId>
+        <version>0.0.25-SNAPSHOT</version>
+        <relativePath />
+    </parent>
+    <artifactId>papiflyfx-docking-content</artifactId>
+    <packaging>pom</packaging>
+    <name>papiflyfx-docking-content</name>
+    <description>PapiflyFX feature content modules.</description>
+    <url>https://github.com/papiflyfx/papiflyfx-docking-content</url>
+    <modules>
+        <module>papiflyfx-docking-tree</module>
+        <module>papiflyfx-docking-media</module>
+        <module>papiflyfx-docking-hugo</module>
+        <module>papiflyfx-docking-github</module>
+    </modules>
+</project>

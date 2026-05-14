@@ -1,0 +1,93 @@
+# Progress: Review2 Node Info Navigation
+
+## Status
+
+- [x] Phase 1: Add feature-flag models
+- [x] Phase 2: Expose mode/policy on `TreeView`
+- [x] Phase 3: Gate keyboard behavior
+- [x] Phase 4: Gate mouse behavior + focus policy
+- [x] Phase 5: Align render and hit-test with mode
+- [x] Phase 6: Add tests for mode matrix and focus policy
+- [x] Phase 7: Validate and polish
+
+## Log
+
+- 2026-03-02: Completed Phase 1.
+  - Added `TreeNodeInfoToggleMode` with `allowsKeyboard()` and `allowsMouse()`.
+  - Added `TreeNodeInfoFocusPolicy`.
+  - Typecheck: `./mvnw -pl papiflyfx-docking-tree -am -DskipTests compile` passed.
+- 2026-03-02: Completed Phase 2.
+  - Added `TreeView` properties:
+    - `nodeInfoToggleMode` (`KEYBOARD_AND_MOUSE` default)
+    - `nodeInfoFocusPolicy` (`FOCUS_TOGGLED_ITEM` default)
+  - Added getters/setters/property accessors with null-safe defaults.
+  - Wired suppliers into `TreeInputController` and `TreePointerController`.
+  - Added viewport synchronization for mouse-toggle affordance via mode changes.
+- 2026-03-02: Completed Phase 3.
+  - Added toggle mode supplier to `TreeInputController`.
+  - Gated platform shortcut path on `mode.allowsKeyboard()`.
+  - Left all non-toggle key handling unchanged.
+- 2026-03-02: Completed Phase 4.
+  - Added mode and focus-policy suppliers to `TreePointerController`.
+  - Gated mouse toggle branch on `mode.allowsMouse()`.
+  - Implemented focus policy behavior:
+    - `KEEP_CURRENT_FOCUS`: toggle only
+    - `FOCUS_TOGGLED_ITEM`: select/focus/anchor toggled item before toggle
+- 2026-03-02: Completed Phase 5.
+  - Added `nodeInfoMouseToggleEnabled` state to `TreeViewport`.
+  - Gated hit-testing (`infoToggleHit`) by mouse-toggle mode.
+  - Gated row `infoAvailable` projection so icon is not drawn when mouse toggles are disabled.
+- 2026-03-02: Completed Phase 6.
+  - Added new `TreeViewFxTest` coverage:
+    - `disabledModePreventsKeyboardAndMouseToggle`
+    - `keyboardOnlyModeAllowsKeyboardButBlocksMouseToggle`
+    - `mouseOnlyModeAllowsMouseButBlocksKeyboardToggle`
+    - `bothModeAllowsKeyboardAndMouseToggle`
+    - `mouseToggleFocusPolicyKeepsCurrentFocus`
+    - `mouseToggleFocusPolicyFocusesToggledItem`
+    - `mouseDisabledHidesInfoToggleAffordanceAndHitZone`
+  - Added small FX helpers for toggle-click test ergonomics.
+- 2026-03-02: Completed Phase 7.
+  - Typecheck passes:
+    - `./mvnw -pl papiflyfx-docking-tree -am -DskipTests compile`
+  - Focused tests pass:
+    - `./mvnw -pl papiflyfx-docking-tree -am -Dtest=TreeViewFxTest -Dsurefire.failIfNoSpecifiedTests=false test -Dtestfx.headless=true`
+  - Full headless tests pass:
+    - `./mvnw -pl papiflyfx-docking-tree -am test -Dtestfx.headless=true`
+- 2026-03-02: SamplesApp follow-up completed.
+  - Updated `TreeViewNodeInfoSample` to expose:
+    - `TreeNodeInfoMode`
+    - `TreeNodeInfoToggleMode`
+    - `TreeNodeInfoFocusPolicy`
+  - Added toolbar hints describing platform keyboard shortcut and mouse toggle semantics.
+  - Validation:
+    - `./mvnw -pl papiflyfx-docking-samples -am -DskipTests compile` passed
+    - `./mvnw -pl papiflyfx-docking-samples -am -Dtest=SamplesSmokeTest -Dsurefire.failIfNoSpecifiedTests=false test -Dtestfx.headless=true` passed
+- 2026-03-02: Inline info row highlight fix completed.
+  - Changed background paint behavior so info rows inherit selection/hover highlight from the same tree item.
+  - Updated FX assertion from non-highlighted expectation to highlighted expectation.
+  - Validation:
+    - `./mvnw -pl papiflyfx-docking-tree -am -DskipTests compile` passed
+    - `./mvnw -pl papiflyfx-docking-tree -am -Dtest=TreeViewFxTest -Dsurefire.failIfNoSpecifiedTests=false test -Dtestfx.headless=true` passed
+- 2026-03-02: Border-only highlight policy for node-info area applied.
+  - Updated render behavior so `INFO` rows no longer use selected fill.
+  - Added border highlight for selected info rows while preserving selected fill on `ITEM` rows.
+  - Updated FX test to assert border-based highlight behavior.
+  - Validation:
+    - `./mvnw -pl papiflyfx-docking-tree -am -DskipTests compile` passed
+    - `./mvnw -pl papiflyfx-docking-tree -am -Dtest=TreeViewFxTest -Dsurefire.failIfNoSpecifiedTests=false test -Dtestfx.headless=true` passed
+- 2026-03-02: Inline node-info indentation applied.
+  - Inline info host now offsets node-info content by row depth and tree metrics.
+  - Horizontal scroll offset is incorporated into inline node placement.
+  - Added FX test `inlineInfoContentUsesTreeIndentation`.
+  - Validation:
+    - `./mvnw -pl papiflyfx-docking-tree -am -DskipTests compile` passed
+    - `./mvnw -pl papiflyfx-docking-tree -am -Dtest=TreeViewFxTest -Dsurefire.failIfNoSpecifiedTests=false test -Dtestfx.headless=true` passed
+- 2026-03-02: Connector line endpoint refinement applied.
+  - Last child connector vertical segment now stops at branch center.
+  - Non-last child connector keeps full-row continuation.
+  - Added FX test `lastChildConnectorStopsAtBranchCenter`.
+  - Validation:
+    - `./mvnw -pl papiflyfx-docking-tree -am -DskipTests compile` passed
+    - `./mvnw -pl papiflyfx-docking-tree -am -Dtest=TreeViewFxTest -Dsurefire.failIfNoSpecifiedTests=false test -Dtestfx.headless=true` passed
+    - `./mvnw -pl papiflyfx-docking-samples -am -DskipTests compile` passed
