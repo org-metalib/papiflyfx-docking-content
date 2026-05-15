@@ -4,7 +4,7 @@
     <parent>
         <groupId>org.metalib.papifly.docking</groupId>
         <artifactId>papiflyfx-docking-content</artifactId>
-        <version>0.0.25</version>
+        <version>0.0.26-SNAPSHOT</version>
     </parent>
     <name>papiflyfx-docking-tree</name>
     <description>Canvas-based virtualized tree component for PapiflyFX docking.</description>

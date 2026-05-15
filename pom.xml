@@ -6,7 +6,7 @@
         <artifactId>papiflyfx-build-parent</artifactId>
         <version>0.0.25</version>
     </parent>
-    <version>0.0.25</version>
+    <version>0.0.26-SNAPSHOT</version>
     <artifactId>papiflyfx-docking-content</artifactId>
     <packaging>pom</packaging>
     <name>papiflyfx-docking-content</name>
@@ -22,6 +22,6 @@
         <connection>scm:git:git://github.com/org-metalib/papiflyfx-docking-content.git</connection>
         <developerConnection>scm:git:https://github.com/org-metalib/papiflyfx-docking-content.git</developerConnection>
         <url>https://github.com/org-metalib/papiflyfx-docking-content</url>
-        <tag>v0.0.25</tag>
+        <tag>HEAD</tag>
     </scm>
 </project>
